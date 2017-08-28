@@ -2,70 +2,51 @@
 
 > Ckeditor using for Vue.js 2
 
-![](screenshot.png)
+![](https://raw.githubusercontent.com/dangvanthanh/vue-ckeditor2/master/screenshot.png)
 
 ## Notes
 
-- If you use Vue.js 1x please reference from [Ckeditor Vue 1x](https://github.com/dangvanthanh/vue-ckeditor/tree/1.0)
+- You can see [wiki document](https://github.com/dangvanthanh/vue-ckeditor2/wiki) to how to use vue-ckeditor
+- If you use Vue.js 1x please reference from [Ckeditor Vue 1x](https://github.com/dangvanthanh/vue-ckeditor2/tree/1.0)
 
-## Usage
+## Requirements
 
-### .vue files
-```html
-<template>
-  <div class="app">
-    <ckeditor v-model="content"
-              :height="'300px'"
-              :toolbar="[['Format']]">
-    </ckeditor>
-  </div>
-</template>
+- [Ckeditor](http://ckeditor.com/) >= 4
+- [Vue.js](http://vuejs.org/) >= 2
 
-<script>
-import Ckeditor from './ckeditor.vue'
+## Install
 
-export default {
-  data () {
-    return {
-      content: ''
-    }
-  },
-  components: { Ckeditor }
-}
-</script>
+```
+# yarn (recommend)
+$ yarn add vue-ckeditor2
+
+# npm
+$ npm install vue-ckeditor2 --save
 ```
 
-## Build setup
+## Props
 
-### [yarn](https://yarnpkg.com) - recommend
-``` bash
-# Install dependencies
-yarn install
+| Name           | Type     | Description                              |
+| -------------- | -------- | ---------------------------------------- |
+| `name`         | `String` | Name of instance ckedior. **Default: editor-1** |
+| `id`           | `String` | Id of instance ckedior. **Default: editor-1** |
+| `types`        | `String` | Types of ckedior. **Default: classic** |
+| `config`       | `Object` | All configuration of ckeditor. **Default: {}** |
 
-# Server with hot reload at localhost:8080
-yarn run dev
+## Build Setup
 
-# Build for production with minification
-yarn run build
-```
+You can use [vue-cli](https://github.com/vuejs/vue-cli) with [vue-rollup-boilerplate templates](https://github.com/dangvanthanh/vue-rollup-boilerplate) or [other vue templates](https://github.com/vuejs-templates)
 
-### [npm](https://www.npmjs.com/)
-``` bash
-# Install dependencies
-npm install
+## Created By
 
-# Server with hot reload at localhost:8080
-npm run dev
-
-# Build for production with minification
-npm run build
-```
-
-## Team
-
-[![Dang Van Thanh](https://avatars3.githubusercontent.com/u/2674850?v=3&s=100)](https://github.com/dangvanthanh) | [![Eduárd Moldován](https://avatars3.githubusercontent.com/u/1571258?v=3&s=100)](https://github.com/edimoldovan) | [![Dominique FERET](https://avatars1.githubusercontent.com/u/7206135?v=3&s=100)](https://github.com/DominiqueFERET)
----|---|---
-[Dang Van Thanh](https://github.com/dangvanthanh) | [Eduárd Moldován](https://github.com/edimoldovan) | [Dominique FERET](https://github.com/DominiqueFERET)
+- [Dang Van Thanh](https://github.com/dangvanthanh)
+- [Eduárd Moldován](https://github.com/edimoldovan)
+- [Dominique FERET](https://github.com/DominiqueFERET)
+- [comfuture](https://github.com/comfuture)
+- [旺旺](https://github.com/chengpan168)
+- [Tony Yip](https://github.com/tonyhhyip)
+- [Nedyalko Dyakov](https://github.com/ndyakov)
+- [Bryan Miller](https://github.com/bryanjamesmiller)
 
 ## License
 
