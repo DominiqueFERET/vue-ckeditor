@@ -1,8 +1,9 @@
 {
   "name": "vue-ckeditor2",
-  "version": "1.11.0",
-  "description": "Ckeditor using for Vue.js 2",
-  "main": "src/ckeditor.vue",
+  "version": "1.21.0",
+  "description": "Ckeditor 4 using with Vue.js",
+  "author": "Dang Van Thanh <dangvanthanh@dangthanh.org>",
+  "main": "src/index.js",
   "peerDependencies": {
     "vue": ">= 2",
     "ckeditor": ">= 4"
@@ -16,6 +17,5 @@
     "ckeditor",
     "vue-ckeditor"
   ],
-  "author": "Dang Van Thanh <dangvanthanh@dangthanh.org>",
   "license": "MIT"
 }
