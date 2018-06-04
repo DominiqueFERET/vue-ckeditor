@@ -4,11 +4,6 @@
 
 ![](https://raw.githubusercontent.com/dangvanthanh/vue-ckeditor2/master/screenshot.png)
 
-## Notes
-
-- You can see [wiki document](https://github.com/dangvanthanh/vue-ckeditor2/wiki) to how to use vue-ckeditor
-- If you use Vue.js 1x please reference from [Ckeditor Vue 1x](https://github.com/dangvanthanh/vue-ckeditor2/tree/1.0)
-
 ## Requirements
 
 - [Ckeditor](http://ckeditor.com/) >= 4
@@ -16,15 +11,62 @@
 
 ## Install
 
-```
-# yarn (recommend)
-$ yarn add vue-ckeditor2
+### CDN
 
-# npm
+```html
+<script src="https://unpkg.com/vue-ckeditor2"></script>
+```
+### NPM
+```
 $ npm install vue-ckeditor2 --save
 ```
 
-## Props
+## Usage
+
+> This document applies to v2.0+. If you are looking for older versions, docs are [here](https://github.com/dangvanthanh/vue-ckeditor2/wiki/Getting-Started)
+
+```javascript
+import Vue from 'vue';
+import VueCkeditor from 'vue-ckeditor2';
+
+Vue.use(VueCkeditor);
+```
+
+Then in your component: 
+
+```vue
+<template>
+  <div>
+    <vue-ckeditor v-model="content" :config="config" @blur="onBlur($event)" @focus="onFocus($event)" />
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      content: '',
+      config: {
+        toolbar: [
+          [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript' ]
+        ],
+        height: 300
+      }
+    }
+  },
+  methods: {
+    onBlur (editor) {
+      console.log(editor)
+    },
+    onFocus (editor) {
+      console.log(editor)
+    }
+  }
+}
+</script>
+```
+
+### Props
 
 | Name           | Type     | Description                              |
 | -------------- | -------- | ---------------------------------------- |
@@ -40,6 +82,9 @@ You can use [vue-cli](https://github.com/vuejs/vue-cli) with [vue-rollup-boilerp
 ## Created By
 
 - [Dang Van Thanh](https://github.com/dangvanthanh)
+
+Thanks to:
+
 - [Eduárd Moldován](https://github.com/edimoldovan)
 - [Dominique FERET](https://github.com/DominiqueFERET)
 - [comfuture](https://github.com/comfuture)
@@ -47,6 +92,9 @@ You can use [vue-cli](https://github.com/vuejs/vue-cli) with [vue-rollup-boilerp
 - [Tony Yip](https://github.com/tonyhhyip)
 - [Nedyalko Dyakov](https://github.com/ndyakov)
 - [Bryan Miller](https://github.com/bryanjamesmiller)
+- [Jeff Omiecinski](https://github.com/omiecinski)
+- [rlfscin](https://github.com/rlfscin)
+- [Renato Souza](https://github.com/renatosistemasvc)
 
 ## License
 
